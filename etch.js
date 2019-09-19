@@ -1,20 +1,28 @@
 'use strict';
 // Add Event Listeners here:
 $(function() {
-  $('.cell').mouseover(function () {
-    console.log($(event.target));
-    $('.cell').addClass('active');
+  $('body').mouseover(function () {
+    $('.cell').mouseover( function () {
+      $(event.target).addClass('active');
+    });
   });
 });
 
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
-
   // Bind your event listeners here:
+  $('.cell').mouseover(function () {
+    console.log($(event.target));
+    $(event.target).addClass('active');
+  });
 });
 
-
+$(() => {
+  $('button').click(function () {
+    createAndPlaceRows(8);
+  });
+});
 
 
 
