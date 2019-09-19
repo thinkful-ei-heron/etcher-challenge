@@ -1,5 +1,11 @@
+'use strict';
 // Add Event Listeners here:
-
+$(function() {
+  $('.cell').mouseover(function () {
+    console.log($(event.target));
+    $('.cell').addClass('active');
+  });
+});
 
 // When DOM is ready:
 $(() => {
